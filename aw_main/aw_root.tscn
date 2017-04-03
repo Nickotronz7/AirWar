@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://aw_main/aw_root.gd" type="Script" id=1]
+[ext_resource path="res://aw_main/chintzy.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://background/background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hud/hud_root.tscn" type="PackedScene" id=4]
+
+[node name="aw_root" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="info" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 37.0
+margin/top = 623.0
+margin/right = 737.0
+margin/bottom = 674.0
+custom_fonts/font = ExtResource( 2 )
+text = "Info"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="background" parent="." instance=ExtResource( 3 )]
+
+[node name="hud_root" parent="." instance=ExtResource( 4 )]
+
+
